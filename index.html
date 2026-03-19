@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Премиум саженцы роз — 200+ сортов. Быстрая доставка, гарантия живых растений, 10+ лет опыта. Заказать сейчас!" />
+  <meta name="keywords" content="розы, саженцы роз, купить розы, чайно-гибридные, флорибунда, плетистые розы, английские розы" />
+  <title>Розовый Сад — Премиум Саженцы Роз | 200+ Сортов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== STICKY HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#" class="logo">
+        <span class="logo__icon">🌹</span>
+        <span class="logo__text">Розовый Сад</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#catalog" class="nav__link">Каталог</a>
+        <a href="#about" class="nav__link">О нас</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#delivery" class="nav__link">Доставка</a>
+        <a href="#faq" class="nav__link">Вопросы</a>
+      </nav>
+      <div class="header__actions">
+        <a href="https://t.me/rosegarden" class="btn btn--ghost btn--sm header-tg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.829.941z"/></svg>
+          Telegram
+        </a>
+        <a href="#catalog" class="btn btn--primary btn--sm">Заказать</a>
+        <button class="header-cart" id="header-cart" aria-label="Корзина">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          <span class="header-cart__count" id="header-cart-count">0</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== URGENCY BAR ===== -->
+  <div class="urgency-bar">
+    <div class="urgency-bar__inner container">
+      <span class="urgency-bar__dot"></span>
+      <span id="urgency-text">🌸 Осталось только <strong>7 заказов</strong> по текущим ценам. Весенний запас разбирают быстро!</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__overlay"></div>
+        <svg class="hero__pattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="rg1" cx="30%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#C8456C" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#4A0020" stop-opacity="0.95"/>
+            </radialGradient>
+            <radialGradient id="rg2" cx="70%" cy="60%" r="50%">
+              <stop offset="0%" stop-color="#E8739A" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#C8456C" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="800" height="600" fill="url(#rg1)"/>
+          <rect width="800" height="600" fill="url(#rg2)"/>
+          <ellipse cx="120" cy="80" rx="60" ry="40" fill="#D4608A" opacity="0.3" transform="rotate(-20 120 80)"/>
+          <ellipse cx="680" cy="120" rx="80" ry="50" fill="#B83060" opacity="0.25" transform="rotate(15 680 120)"/>
+          <ellipse cx="750" cy="400" rx="70" ry="45" fill="#E8739A" opacity="0.2" transform="rotate(-10 750 400)"/>
+          <ellipse cx="50" cy="500" rx="90" ry="55" fill="#C8456C" opacity="0.2" transform="rotate(25 50 500)"/>
+          <ellipse cx="400" cy="550" rx="120" ry="60" fill="#D4608A" opacity="0.15" transform="rotate(5 400 550)"/>
+        </svg>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__badge fade-in">🌹 Весенняя коллекция 2025</div>
+        <h1 class="hero__headline fade-in fade-in--delay-1">
+          Розы, которые превратят<br/>
+          <em>ваш сад в сказку</em>
+        </h1>
+        <p class="hero__sub fade-in fade-in--delay-2">
+          200+ премиум сортов · Быстрая доставка · Гарантия живого растения · Поддержка после покупки
+        </p>
+        <div class="hero__cta fade-in fade-in--delay-3">
+          <a href="#catalog" class="btn btn--hero">Выбрать розы →</a>
+          <a href="#bestsellers" class="btn btn--hero-ghost">Хиты продаж</a>
+        </div>
+        <div class="hero__proof fade-in fade-in--delay-4">
+          <div class="hero__proof-item">
+            <strong>5 000+</strong>
+            <span>Довольных клиентов</span>
+          </div>
+          <div class="hero__proof-divider"></div>
+          <div class="hero__proof-item">
+            <strong>10+ лет</strong>
+            <span>Опыта</span>
+          </div>
+          <div class="hero__proof-divider"></div>
+          <div class="hero__proof-item">
+            <strong>200+</strong>
+            <span>Сортов</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint">
+        <span>Листайте вниз</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BLOCK ===== -->
+    <section class="trust" id="trust">
+      <div class="container">
+        <div class="trust__grid">
+          <div class="trust__item reveal">
+            <div class="trust__icon">📦</div>
+            <div class="trust__text">
+              <strong>5 000+ заказов</strong>
+              <span>Успешно доставлено по всей стране</span>
+            </div>
+          </div>
+          <div class="trust__item reveal">
+            <div class="trust__icon">🌱</div>
+            <div class="trust__text">
+              <strong>10+ лет опыта</strong>
+              <span>Выращиваем премиум саженцы роз</span>
+            </div>
+          </div>
+          <div class="trust__item reveal">
+            <div class="trust__icon">🏆</div>
+            <div class="trust__text">
+              <strong>Отборные сорта</strong>
+              <span>Только лучшие сорта в нашем каталоге</span>
+            </div>
+          </div>
+          <div class="trust__item reveal">
+            <div class="trust__icon">💚</div>
+            <div class="trust__text">
+              <strong>Гарантия живого растения</strong>
+              <span>Доедет живым — или заменим бесплатно</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BESTSELLERS ===== -->
+    <section class="section bestsellers" id="bestsellers">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Любимые клиентами</div>
+          <h2 class="section__title">Хиты продаж</h2>
+          <p class="section__sub">Самые популярные сорта — проверены, любимы и заказывают снова</p>
+        </div>
+        <div class="products__grid" id="bestsellers-grid">
+          <!-- Рендерится JS -->
+        </div>
+        <div class="section__footer reveal">
+          <a href="#catalog" class="btn btn--primary btn--lg">Смотреть весь каталог →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATALOG ===== -->
+    <section class="section catalog" id="catalog">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Полная коллекция</div>
+          <h2 class="section__title">Каталог роз</h2>
+          <p class="section__sub">200+ сортов — найдите идеальную розу для вашего сада</p>
+        </div>
+
+        <!-- Вкладки категорий -->
+        <div class="catalog__tabs reveal">
+          <button class="catalog__tab active" data-cat="all">Все розы</button>
+          <button class="catalog__tab" data-cat="hybrid-tea">Чайно-гибридные</button>
+          <button class="catalog__tab" data-cat="floribunda">Флорибунда</button>
+          <button class="catalog__tab" data-cat="climbing">Плетистые</button>
+          <button class="catalog__tab" data-cat="english">Английские розы</button>
+        </div>
+
+        <!-- Фильтры -->
+        <div class="filters reveal">
+          <div class="filters__group">
+            <label class="filters__label">Цвет</label>
+            <div class="filters__colors">
+              <button class="color-btn active" data-color="all" title="Все цвета"><span>Все</span></button>
+              <button class="color-btn" data-color="red" title="Красный" style="--c:#C0392B"></button>
+              <button class="color-btn" data-color="pink" title="Розовый" style="--c:#E8739A"></button>
+              <button class="color-btn" data-color="white" title="Белый" style="--c:#F5F0EB"></button>
+              <button class="color-btn" data-color="yellow" title="Жёлтый" style="--c:#F1C40F"></button>
+              <button class="color-btn" data-color="purple" title="Фиолетовый" style="--c:#9B59B6"></button>
+              <button class="color-btn" data-color="orange" title="Оранжевый" style="--c:#E67E22"></button>
+            </div>
+          </div>
+          <div class="filters__group">
+            <label class="filters__label">Высота</label>
+            <select class="filters__select" id="filter-height">
+              <option value="all">Любая высота</option>
+              <option value="low">Низкорослые (до 60 см)</option>
+              <option value="medium">Среднерослые (60–120 см)</option>
+              <option value="tall">Высокорослые (от 120 см)</option>
+            </select>
+          </div>
+          <div class="filters__group">
+            <label class="filters__label">Цветение</label>
+            <select class="filters__select" id="filter-flowering">
+              <option value="all">Любое цветение</option>
+              <option value="once">Однократное</option>
+              <option value="repeat">Повторное</option>
+              <option value="continuous">Непрерывное</option>
+            </select>
+          </div>
+          <button class="btn btn--ghost btn--sm" id="reset-filters">Сбросить</button>
+        </div>
+
+        <div class="products__grid" id="catalog-grid">
+          <!-- Рендерится JS -->
+        </div>
+
+        <div class="catalog__load reveal">
+          <button class="btn btn--outline btn--lg" id="load-more">Загрузить ещё</button>
+          <p class="catalog__count" id="catalog-count"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="section why" id="about">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Наши преимущества</div>
+          <h2 class="section__title">Почему выбирают нас</h2>
+        </div>
+        <div class="why__grid">
+          <div class="why__card reveal">
+            <div class="why__icon">🌿</div>
+            <h3>Мощная корневая система</h3>
+            <p>Каждый саженец выращивается минимум 2 сезона перед отправкой. Вы получаете крепкое растение, готовое расти.</p>
+          </div>
+          <div class="why__card reveal">
+            <div class="why__icon">🚚</div>
+            <h3>Безопасная доставка</h3>
+            <p>Специальная упаковка сохраняет корни влажными, а стебли — защищёнными на всём пути до вашей двери.</p>
+          </div>
+          <div class="why__card reveal">
+            <div class="why__icon">📸</div>
+            <h3>Настоящие фото</h3>
+            <p>Все фотографии в каталоге сделаны на нашей ферме. Никаких стоковых изображений — что видите, то и получаете.</p>
+          </div>
+          <div class="why__card reveal">
+            <div class="why__icon">💬</div>
+            <h3>Поддержка после покупки</h3>
+            <p>Наши эксперты по розам доступны в Telegram и WhatsApp — помогут с посадкой и первым цветением.</p>
+          </div>
+          <div class="why__card reveal">
+            <div class="why__icon">🔁</div>
+            <h3>Гарантия замены</h3>
+            <p>Если растение не выживет в течение 30 дней — пришлём замену без лишних вопросов и бесплатно.</p>
+          </div>
+          <div class="why__card reveal">
+            <div class="why__icon">🌍</div>
+            <h3>Доставка по всей России</h3>
+            <p>Отправляем во все регионы. Сроки подбираем так, чтобы розы приехали в оптимальное время для посадки.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__header reveal">
+          <div class="section__tag">Отзывы покупателей</div>
+          <h2 class="section__title">Что говорят наши клиенты</h2>
+          <div class="reviews__rating">
+            <div class="stars">★★★★★</div>
+            <span>4.9 из 5 · На основе 847 отзывов</span>
+          </div>
+        </div>
+        <div class="reviews__grid">
+
+          <div class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" style="background:#E8739A">М</div>
+              <div>
+                <div class="review-card__name">Марина К.</div>
+                <div class="review-card__location">📍 Московская область</div>
+              </div>
+              <div class="review-card__stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">«Заказала 5 сортов весной. Все приехали в идеальном состоянии, корни живые и влажные. Два уже бутонизируют! Упаковка невероятная — ни одного сломанного стебля.»</p>
+            <div class="review-card__tag">David Austin · Чайно-гибридные</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" style="background:#C8456C">О</div>
+              <div>
+                <div class="review-card__name">Ольга П.</div>
+                <div class="review-card__location">📍 Санкт-Петербург</div>
+              </div>
+              <div class="review-card__stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">«Третий заказ в Розовом Саду. Стабильно отличное качество. Менеджер помог подобрать сорта под мой климат — ещё и позвонили после доставки, спросили как доехали растения!»</p>
+            <div class="review-card__tag">Флорибунда · Плетистые</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" style="background:#8B1A4A">Т</div>
+              <div>
+                <div class="review-card__name">Татьяна С.</div>
+                <div class="review-card__location">📍 Краснодар</div>
+              </div>
+              <div class="review-card__stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">«Сомневалась, стоит ли заказывать живые растения онлайн, но фото в каталоге на 100% реальные — моя роза выглядит точь-в-точь как на картинке. Зацвела через 6 недель!»</p>
+            <div class="review-card__tag">Английская роза · Graham Thomas</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" style="background:#D4608A">Н</div>
+              <div>
+                <div class="review-card__name">Наталья В.</div>
+                <div class="review-card__location">📍 Новосибирск</div>
+              </div>
+              <div class="review-card__stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">«Быстрая доставка в Сибирь — была приятно удивлена. Растения приехали живыми и здоровыми. Группа поддержки в Telegram — находка, отвечают на любой вопрос терпеливо.»</p>
+            <div class="review-card__tag">Чайно-гибридные · Queen of Sweden</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" style="background:#B83060">Л</div>
+              <div>
+                <div class="review-card__name">Людмила А.</div>
+                <div class="review-card__location">📍 Воронеж</div>
+              </div>
+              <div class="review-card__stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">«Плетистая роза, которую я заказала, покрыла всю арку за один сезон. Такой мощный рост! Обязательно вернусь за новыми сортами следующей весной.»</p>
+            <div class="review-card__tag">Плетистые · New Dawn</div>
+          </div>
+
+          <div class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" style="background:#C8456C">Е</div>
+              <div>
+                <div class="review-card__name">Елена М.</div>
+                <div class="review-card__location">📍 Екатеринбург</div>
+              </div>
+              <div class="review-card__stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">«Воспользовалась гарантией замены — одно растение не прижилось. Процесс был быстрым и без лишней бюрократии. Новое растение прислали за неделю, сейчас прекрасно растёт!»</p>
+            <div class="review-card__tag">Флорибунда · Iceberg</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DELIVERY & PAYMENT ===== -->
+    <section class="section delivery" id="delivery">
+      <div class="container">
+        <div class="delivery__inner">
+          <div class="delivery__info reveal">
+            <div class="section__tag">Доставка и оплата</div>
+            <h2 class="section__title">Просто и надёжно</h2>
+            <div class="delivery__steps">
+              <div class="delivery__step">
+                <div class="delivery__step-num">1</div>
+                <div>
+                  <strong>Оформляете заказ онлайн</strong>
+                  <p>Выбираете розы, добавляете в корзину и оформляете за 2 минуты.</p>
+                </div>
+              </div>
+              <div class="delivery__step">
+                <div class="delivery__step-num">2</div>
+                <div>
+                  <strong>Мы готовим заказ</strong>
+                  <p>Растения выкапываем, обрабатываем и упаковываем в течение 24 часов.</p>
+                </div>
+              </div>
+              <div class="delivery__step">
+                <div class="delivery__step-num">3</div>
+                <div>
+                  <strong>Быстрая доставка по России</strong>
+                  <p>Отправляем курьерской службой. Доставка: 3–7 дней в зависимости от региона.</p>
+                </div>
+              </div>
+              <div class="delivery__step">
+                <div class="delivery__step-num">4</div>
+                <div>
+                  <strong>Распаковываете и сажаете</strong>
+                  <p>Следуйте инструкции по уходу (вложена в каждую посылку) — и наблюдайте, как растут!</p>
+                </div>
+              </div>
+            </div>
+            <div class="delivery__payments">
+              <span class="delivery__pay-badge">💳 Карта онлайн</span>
+              <span class="delivery__pay-badge">🏦 Перевод на счёт</span>
+              <span class="delivery__pay-badge">💵 Наложенный платёж</span>
+            </div>
+          </div>
+
+          <div class="delivery__regions reveal">
+            <h3>Доставляем во все регионы</h3>
+            <div class="regions__grid">
+              <div class="region">🏙️ Москва и область <span>2–3 дня</span></div>
+              <div class="region">🏙️ Санкт-Петербург <span>2–4 дня</span></div>
+              <div class="region">🌾 Центральная Россия <span>3–5 дней</span></div>
+              <div class="region">🌲 Сибирь <span>5–7 дней</span></div>
+              <div class="region">☀️ Юг России <span>3–5 дней</span></div>
+              <div class="region">🌊 Урал <span>4–6 дней</span></div>
+              <div class="region">🏔️ Дальний Восток <span>6–8 дней</span></div>
+              <div class="region">📦 Другие регионы <span>Уточнить</span></div>
+            </div>
+            <div class="delivery__free-note">
+              🎁 <strong>Бесплатная доставка</strong> при заказе от 3 000 ₽
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="faq__inner">
+          <div class="section__header reveal">
+            <div class="section__tag">Вопросы и ответы</div>
+            <h2 class="section__title">Часто задаваемые вопросы</h2>
+          </div>
+          <div class="faq__list" id="faq-list">
+
+            <div class="faq__item reveal">
+              <button class="faq__q">
+                <span>Как посадить розу после получения?</span>
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__a">
+                <p>Замочите корни в воде на 2 часа перед посадкой. Выкопайте яму 50×50 см, добавьте компост, посадите саженец так, чтобы место прививки было на 5 см ниже уровня почвы, и обильно полейте. К каждому заказу прилагается подробная инструкция по уходу, а наши эксперты готовы ответить на вопросы в Telegram.</p>
+              </div>
+            </div>
+
+            <div class="faq__item reveal">
+              <button class="faq__q">
+                <span>Когда роза зацветёт?</span>
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__a">
+                <p>Большинство роз дадут первые бутоны через 6–10 недель после посадки. Первый год направлен на укоренение — не переживайте, если цветение будет скромным. Со второго сезона вы получите полноценное пышное цветение. Ремонтантные сорта цветут с июня по октябрь.</p>
+              </div>
+            </div>
+
+            <div class="faq__item reveal">
+              <button class="faq__q">
+                <span>Что если растение не приживётся?</span>
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__a">
+                <p>Мы стоим за каждое проданное растение. Если ваша роза не выживет в течение 30 дней после получения — по любой причине — напишите нам в Telegram или WhatsApp с фото, и мы бесплатно пришлём замену. Никаких сложных процедур и споров.</p>
+              </div>
+            </div>
+
+            <div class="faq__item reveal">
+              <button class="faq__q">
+                <span>Когда лучше всего сажать розы?</span>
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__a">
+                <p>Лучшее время — весна (апрель–май) и осень (сентябрь–октябрь). Мы подбираем сроки отправки под оптимальное посадочное окно вашего региона. После оформления заказа подтвердим лучшую дату отправки.</p>
+              </div>
+            </div>
+
+            <div class="faq__item reveal">
+              <button class="faq__q">
+                <span>Вы продаёте саженцы с открытым корнем или в горшке?</span>
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__a">
+                <p>Продаём и те, и другие! Саженцы с открытым корнем (весна и осень) приживаются быстрее и стоят дешевле. Контейнерные розы можно сажать круглый год, и они быстрее показывают результат. В карточке каждого товара указан тип. На оба вида распространяется наша гарантия.</p>
+              </div>
+            </div>
+
+            <div class="faq__item reveal">
+              <button class="faq__q">
+                <span>Можно заказать сорт, которого нет в каталоге?</span>
+                <span class="faq__icon">+</span>
+              </button>
+              <div class="faq__a">
+                <p>Конечно! У нас более 200 сортов, и каталог регулярно пополняется. Напишите нам в Telegram или WhatsApp с названием нужного сорта — скорее всего, он у нас есть, или мы сможем его достать к следующему сезону.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner__inner reveal">
+          <h2>Начните свой розовый сад уже сегодня</h2>
+          <p>Присоединяйтесь к 5 000+ счастливых садоводов, которые растят с нами каждый сезон</p>
+          <div class="cta-banner__actions">
+            <a href="#catalog" class="btn btn--hero">В каталог →</a>
+            <a href="https://wa.me/79001234567" class="btn btn--hero-ghost">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.418A9.956 9.956 0 0011.998 22C17.52 22 22 17.523 22 12S17.52 2 11.998 2zm0 18a7.964 7.964 0 01-4.07-1.117l-.292-.173-3.027.862.876-3.004-.19-.31A7.964 7.964 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="logo">
+            <span class="logo__icon">🌹</span>
+            <span class="logo__text">Розовый Сад</span>
+          </div>
+          <p>Премиум саженцы роз с доставкой до двери с 2014 года. Выращиваем красоту — одну розу за раз.</p>
+          <div class="footer__social">
+            <a href="https://t.me/rosegarden" class="footer__social-btn" aria-label="Telegram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.829.941z"/></svg>
+            </a>
+            <a href="https://wa.me/79001234567" class="footer__social-btn" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.418A9.956 9.956 0 0011.998 22C17.52 22 22 17.523 22 12S17.52 2 11.998 2zm0 18a7.964 7.964 0 01-4.07-1.117l-.292-.173-3.027.862.876-3.004-.19-.31A7.964 7.964 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+            </a>
+            <a href="https://instagram.com/rosegarden" class="footer__social-btn" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Каталог</h4>
+          <ul>
+            <li><a href="#catalog">Чайно-гибридные</a></li>
+            <li><a href="#catalog">Флорибунда</a></li>
+            <li><a href="#catalog">Плетистые</a></li>
+            <li><a href="#catalog">Английские розы</a></li>
+            <li><a href="#catalog">Все сорта</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Информация</h4>
+          <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#delivery">Доставка и оплата</a></li>
+            <li><a href="#faq">Вопросы и ответы</a></li>
+            <li><a href="#reviews">Отзывы покупателей</a></li>
+            <li><a href="#">Уход за розами</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Связаться с нами</h4>
+          <ul class="footer__contacts">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:hello@rosegarden.ru">hello@rosegarden.ru</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Пн–Сб: 9:00–19:00</span>
+            </li>
+          </ul>
+          <div class="footer__contact-btns">
+            <a href="https://t.me/rosegarden" class="btn btn--ghost btn--sm">Telegram →</a>
+            <a href="https://wa.me/79001234567" class="btn btn--ghost btn--sm">WhatsApp →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2025 Розовый Сад. Все права защищены.</p>
+        <div class="footer__legal">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Условия использования</a>
+          <a href="#">Политика cookie</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__header">
+      <h3>Корзина <span class="cart-count" id="cart-count-drawer">0</span></h3>
+      <button class="cart-drawer__close" id="cart-close">×</button>
+    </div>
+    <div class="cart-drawer__items" id="cart-items"></div>
+    <div class="cart-drawer__footer" id="cart-footer">
+      <div class="cart-drawer__total">
+        Итого: <strong id="cart-total">0 ₽</strong>
+      </div>
+      <button class="btn btn--primary btn--lg" style="width:100%">Оформить заказ →</button>
+    </div>
+    <div class="cart-empty" id="cart-empty">
+      <span>🌹</span>
+      <p>Корзина пуста</p>
+      <a href="#catalog" class="btn btn--ghost btn--sm">Выбрать розы</a>
+    </div>
+  </div>
+
+  <!-- ===== FLOATING CART BUTTON ===== -->
+  <button class="float-cart" id="float-cart" aria-label="Корзина">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+    <span class="float-cart__count" id="float-cart-count">0</span>
+  </button>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div class="modal-overlay" id="checkout-overlay"></div>
+  <div class="modal" id="checkout-modal">
+    <button class="modal__close" id="checkout-close">×</button>
+    <div class="modal__content">
+      <div class="checkout-header">
+        <div class="checkout-icon">🌹</div>
+        <h2>Оформление заказа</h2>
+        <p>Оставьте контакты — мы свяжемся в течение 15 минут</p>
+      </div>
+      <div class="checkout-items" id="checkout-items-list"></div>
+      <div class="checkout-total-row">
+        <span>Итого:</span>
+        <strong id="checkout-total-display">0 ₽</strong>
+      </div>
+      <form class="checkout-form" id="checkout-form" novalidate>
+        <div class="form-group">
+          <label class="form-label">Ваше имя *</label>
+          <input class="form-input" type="text" id="checkout-name" placeholder="Например, Марина" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Номер телефона *</label>
+          <input class="form-input" type="tel" id="checkout-phone" placeholder="+7 (___) ___-__-__" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Город доставки</label>
+          <input class="form-input" type="text" id="checkout-city" placeholder="Например, Москва" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Комментарий к заказу</label>
+          <textarea class="form-input form-textarea" id="checkout-comment" placeholder="Вопросы по уходу, предпочтения по упаковке..."></textarea>
+        </div>
+        <div class="checkout-actions">
+          <button type="submit" class="btn btn--primary btn--lg" style="width:100%">
+            Отправить заказ в WhatsApp →
+          </button>
+          <button type="button" class="btn btn--ghost btn--lg" style="width:100%" id="checkout-tg">
+            Отправить заказ в Telegram →
+          </button>
+        </div>
+        <p class="checkout-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== QUICK VIEW MODAL ===== -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal" id="quick-modal">
+    <button class="modal__close" id="modal-close">×</button>
+    <div class="modal__content" id="modal-content"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
