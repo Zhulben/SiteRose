@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель — Розовый Сад</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- ===== ЭКРАН ВХОДА ===== -->
+  <div class="login-screen" id="login-screen">
+    <div class="login-box">
+      <div class="login-logo">🌹</div>
+      <h1>Розовый Сад</h1>
+      <p>Панель управления</p>
+      <form id="login-form">
+        <div class="field">
+          <label>Пароль</label>
+          <input type="password" id="login-password" placeholder="Введите пароль" autocomplete="current-password" />
+        </div>
+        <div class="login-error" id="login-error">Неверный пароль</div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Войти →</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== ГЛАВНАЯ ПАНЕЛЬ ===== -->
+  <div class="admin-app" id="admin-app" style="display:none">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar__logo">
+        <span>🌹</span>
+        <span>Розовый Сад</span>
+      </div>
+      <nav class="sidebar__nav">
+        <button class="sidebar__item active" data-tab="products">
+          <span>🌹</span> Товары
+        </button>
+        <button class="sidebar__item" data-tab="settings">
+          <span>⚙️</span> Настройки
+        </button>
+        <button class="sidebar__item" data-tab="export">
+          <span>📤</span> Экспорт
+        </button>
+      </nav>
+      <div class="sidebar__footer">
+        <a href="index.html" target="_blank" class="sidebar__view-site">
+          Открыть сайт →
+        </a>
+        <button class="sidebar__logout" id="logout-btn">Выйти</button>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="admin-main">
+
+      <!-- === TAB: PRODUCTS === -->
+      <div class="tab-content active" id="tab-products">
+        <div class="page-header">
+          <div>
+            <h2>Товары</h2>
+            <p class="page-sub" id="products-count">Загрузка...</p>
+          </div>
+          <button class="btn btn-primary" id="add-product-btn">+ Добавить розу</button>
+        </div>
+
+        <!-- Search & filter -->
+        <div class="toolbar">
+          <input class="toolbar__search" type="text" id="search-input" placeholder="🔍 Поиск по названию..." />
+          <select class="toolbar__select" id="filter-cat">
+            <option value="all">Все категории</option>
+            <option value="hybrid-tea">Чайно-гибридные</option>
+            <option value="floribunda">Флорибунда</option>
+            <option value="climbing">Плетистые</option>
+            <option value="english">Английские розы</option>
+          </select>
+          <select class="toolbar__select" id="filter-stock">
+            <option value="all">Любой запас</option>
+            <option value="low">Мало (≤5 шт)</option>
+            <option value="out">Нет в наличии</option>
+          </select>
+        </div>
+
+        <!-- Products table -->
+        <div class="table-wrap">
+          <table class="products-table" id="products-table">
+            <thead>
+              <tr>
+                <th>Фото</th>
+                <th>Название</th>
+                <th>Категория</th>
+                <th>Цена</th>
+                <th>Старая цена</th>
+                <th>Остаток</th>
+                <th>Хит</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody id="products-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- === TAB: SETTINGS === -->
+      <div class="tab-content" id="tab-settings">
+        <div class="page-header">
+          <div>
+            <h2>Настройки сайта</h2>
+            <p class="page-sub">Контакты, тексты, параметры</p>
+          </div>
+          <button class="btn btn-primary" id="save-settings-btn">Сохранить</button>
+        </div>
+        <div class="settings-grid">
+          <div class="settings-card">
+            <h3>Контакты</h3>
+            <div class="field"><label>Телефон</label><input type="text" id="s-phone" placeholder="+7 (900) 123-45-67" /></div>
+            <div class="field"><label>Email</label><input type="email" id="s-email" placeholder="hello@rosegarden.ru" /></div>
+            <div class="field"><label>WhatsApp (только цифры)</label><input type="text" id="s-whatsapp" placeholder="79001234567" /></div>
+            <div class="field"><label>Telegram username</label><input type="text" id="s-telegram" placeholder="rosegarden" /></div>
+          </div>
+          <div class="settings-card">
+            <h3>Тексты главной страницы</h3>
+            <div class="field"><label>Заголовок Hero</label><input type="text" id="s-hero-title" /></div>
+            <div class="field"><label>Подзаголовок Hero</label><input type="text" id="s-hero-sub" /></div>
+            <div class="field"><label>Бесплатная доставка от (₽)</label><input type="number" id="s-free-delivery" /></div>
+          </div>
+          <div class="settings-card">
+            <h3>Пароль от админки</h3>
+            <div class="field"><label>Новый пароль</label><input type="password" id="s-new-password" placeholder="Введите новый пароль" /></div>
+            <div class="field"><label>Повторите пароль</label><input type="password" id="s-confirm-password" placeholder="Повторите пароль" /></div>
+            <button class="btn btn-secondary" id="change-password-btn">Изменить пароль</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- === TAB: EXPORT === -->
+      <div class="tab-content" id="tab-export">
+        <div class="page-header">
+          <div>
+            <h2>Экспорт данных</h2>
+            <p class="page-sub">Сохраните изменения на сайте</p>
+          </div>
+        </div>
+        <div class="export-cards">
+          <div class="export-card">
+            <div class="export-card__icon">📋</div>
+            <h3>Инструкция</h3>
+            <p>Все изменения в товарах сохраняются автоматически и сразу видны на сайте (в том же браузере).</p>
+            <p>Чтобы изменения были видны <strong>всем пользователям</strong> — нужно обновить файлы на GitHub.</p>
+          </div>
+          <div class="export-card">
+            <div class="export-card__icon">📥</div>
+            <h3>Скачать app.js</h3>
+            <p>Скачайте обновлённый файл с вашими товарами и загрузите его на GitHub вместо старого.</p>
+            <button class="btn btn-primary" id="download-appjs">Скачать app.js</button>
+          </div>
+          <div class="export-card">
+            <div class="export-card__icon">🔄</div>
+            <h3>Сбросить к исходным данным</h3>
+            <p>Удалит все изменения и вернёт товары к первоначальному списку.</p>
+            <button class="btn btn-danger" id="reset-data-btn">Сбросить данные</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ===== МОДАЛЬНОЕ ОКНО РЕДАКТИРОВАНИЯ ===== -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="edit-modal" id="edit-modal">
+    <div class="edit-modal__header">
+      <h3 id="modal-title">Добавить розу</h3>
+      <button class="modal-close" id="modal-close">×</button>
+    </div>
+    <div class="edit-modal__body">
+      <div class="modal-grid">
+
+        <!-- Левая колонка: фото -->
+        <div class="modal-photo-col">
+          <div class="photo-upload" id="photo-preview">
+            <div class="photo-upload__placeholder" id="photo-placeholder">
+              <span id="emoji-preview">🌹</span>
+              <p>Нажмите для загрузки фото</p>
+            </div>
+            <img id="photo-img" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:12px;" />
+          </div>
+          <input type="file" id="photo-input" accept="image/*" style="display:none" />
+          <button class="btn btn-secondary" id="upload-photo-btn" style="width:100%">📷 Загрузить фото</button>
+          <button class="btn btn-ghost" id="remove-photo-btn" style="width:100%; margin-top:8px; display:none">Удалить фото</button>
+          <div class="field" style="margin-top:16px">
+            <label>Эмодзи (если нет фото)</label>
+            <input type="text" id="field-emoji" placeholder="🌹" maxlength="4" style="font-size:24px; text-align:center" />
+          </div>
+        </div>
+
+        <!-- Правая колонка: поля -->
+        <div class="modal-fields-col">
+          <div class="fields-row">
+            <div class="field">
+              <label>Название <span class="req">*</span></label>
+              <input type="text" id="field-name" placeholder="Например, Queen Elizabeth" />
+            </div>
+            <div class="field">
+              <label>Категория <span class="req">*</span></label>
+              <select id="field-category">
+                <option value="hybrid-tea">Чайно-гибридная</option>
+                <option value="floribunda">Флорибунда</option>
+                <option value="climbing">Плетистая</option>
+                <option value="english">Английская роза</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="fields-row">
+            <div class="field">
+              <label>Цвет</label>
+              <select id="field-color">
+                <option value="red">Красный</option>
+                <option value="pink">Розовый</option>
+                <option value="white">Белый</option>
+                <option value="yellow">Жёлтый</option>
+                <option value="purple">Фиолетовый</option>
+                <option value="orange">Оранжевый</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Высота</label>
+              <select id="field-height">
+                <option value="low">Низкорослая (до 60 см)</option>
+                <option value="medium">Среднерослая (60–120 см)</option>
+                <option value="tall">Высокорослая (от 120 см)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="fields-row">
+            <div class="field">
+              <label>Цветение</label>
+              <select id="field-flowering">
+                <option value="once">Однократное</option>
+                <option value="repeat">Повторное</option>
+                <option value="continuous">Непрерывное</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Остаток (шт)</label>
+              <input type="number" id="field-stock" min="0" placeholder="10" />
+            </div>
+          </div>
+
+          <div class="fields-row">
+            <div class="field">
+              <label>Цена (₽) <span class="req">*</span></label>
+              <input type="number" id="field-price" min="0" placeholder="890" />
+            </div>
+            <div class="field">
+              <label>Старая цена (₽)</label>
+              <input type="number" id="field-old-price" min="0" placeholder="Необязательно" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Плашка на карточке</label>
+            <input type="text" id="field-badge" placeholder="Хит продаж / Редкий / David Austin" />
+          </div>
+
+          <div class="field">
+            <label>Описание</label>
+            <textarea id="field-desc" rows="4" placeholder="Описание сорта — аромат, цвет, особенности..."></textarea>
+          </div>
+
+          <div class="fields-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="field-bestseller" />
+              <span>Показывать в «Хитах продаж»</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="edit-modal__footer">
+      <button class="btn btn-ghost" id="cancel-btn">Отмена</button>
+      <button class="btn btn-primary" id="save-product-btn">Сохранить</button>
+    </div>
+  </div>
+
+  <!-- Подтверждение удаления -->
+  <div class="confirm-overlay" id="confirm-overlay"></div>
+  <div class="confirm-box" id="confirm-box">
+    <div class="confirm-box__icon">🗑️</div>
+    <h3>Удалить товар?</h3>
+    <p id="confirm-text">Это действие нельзя отменить.</p>
+    <div class="confirm-box__actions">
+      <button class="btn btn-ghost" id="confirm-cancel">Отмена</button>
+      <button class="btn btn-danger" id="confirm-ok">Удалить</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

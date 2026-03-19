@@ -328,6 +328,20 @@ const PRODUCTS = [
   },
 ];
 
+/* === ЗАГРУЗКА ТОВАРОВ ИЗ АДМИНКИ (если есть) === */
+(function() {
+  const saved = localStorage.getItem('rg_products');
+  if (saved) {
+    try {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        PRODUCTS.length = 0;
+        parsed.forEach(p => PRODUCTS.push(p));
+      }
+    } catch(e) {}
+  }
+})();
+
 /* === СОСТОЯНИЕ === */
 const state = {
   cart: [],
